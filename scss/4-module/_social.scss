@@ -1,0 +1,58 @@
+// Social
+.social {
+  position: absolute;
+  bottom: 10%;
+  right: 2rem;
+  line-height: 1;
+  z-index: 9;
+  visibility: hidden;
+
+  &_icon {
+    &:nth-child(1) {
+      -webkit-transition-delay: 3.4s;
+      -o-transition-delay: 3.4s;
+      transition-delay: 3.4s;
+    }
+    &:nth-child(2) {
+      -webkit-transition-delay: 3.6s;
+      -o-transition-delay: 3.6s;
+      transition-delay: 3.6s;
+    }
+    &:nth-child(3) {
+      -webkit-transition-delay: 3.8s;
+      -o-transition-delay: 3.8s;
+      transition-delay: 3.8s;
+    }
+  }
+
+  &.is-visible {
+    .scale-up {
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none;
+      opacity: 1;
+    }
+  }
+
+  & > * + * {
+    margin-top: 1rem;
+  }
+}
+
+.social_icon {
+  font-size: 1.2rem;
+  padding: 0.2rem;
+  display: block;
+
+  &:focus,
+  &:hover {
+    outline: 2px solid #fff;
+    outline-offset: 0.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .social {
+    visibility: visible;
+  }
+}

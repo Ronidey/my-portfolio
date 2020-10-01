@@ -1,0 +1,61 @@
+.badge {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 10px;
+  opacity: 0;
+  -webkit-transform: rotate(-90deg) translateY(-15px);
+  -ms-transform: rotate(-90deg) translateY(-15px);
+  transform: rotate(-90deg) translateY(-15px);
+  -webkit-transition: all 1s $cubic-bezier;
+  -o-transition: all 1s $cubic-bezier;
+  transition: all 1s $cubic-bezier;
+}
+
+.badge.is-visible {
+  opacity: 1;
+  -webkit-transform: rotate(-90deg) translateY(0);
+  -ms-transform: rotate(-90deg) translateY(0);
+  transform: rotate(-90deg) translateY(0);
+}
+
+@media (min-width: 900px) {
+  .badge {
+    display: block;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 9;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 250ms ease;
+  -o-transition: opacity 250ms ease;
+  transition: opacity 250ms ease;
+}
+
+.nav-is-open .overlay {
+  opacity: 1;
+  visibility: visible;
+
+  @include m-query($md) {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+// Line
+.line {
+  border: 0;
+  border-top: 2px solid #fff;
+}

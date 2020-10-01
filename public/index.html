@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="./font-awesome/css/all.min.css">
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+  <div class="overlay" id="overlay"></div>
+
+  <header class="header">
+    <nav class='nav show-on-enter'>
+      <ul class='nav_menu'>
+        <li class="scale-down"><a class='nav_link is-active' href='#home'>Home</a></li>
+        <li class="scale-down"><a class='nav_link' href='#about'>About</a></li>
+        <li class="scale-down"><a class='nav_link' href='#work'>Work</a></li>
+        <li class="scale-down"><a class='nav_link' href='#skill'>Skill</a></li>
+        <li class="scale-down"><a class='nav_link' href='#contact'>Contact</a></li>
+      </ul>
+    </nav>
+    <button class="btn-menu" id="btn-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <nav class="side-nav">
+    <div class="side-nav_top"></div>
+    <div class="side-nav_body">
+      <div class="side-nav_menu">
+        <a class="side-nav_link is-active" href="#home">Home</a>
+        <a class="side-nav_link" href="#about">About</a>
+        <a class="side-nav_link" href="#work">Work</a>
+        <a class="side-nav_link" href="#skill">Skills</a>
+        <a class="side-nav_link" href="#contact">Contacts</a>
+      </div>
+      <hr>
+      <p>Find me on:</p>
+      <a class="contact-link clr-github" href="#">
+        <i class="fab fa-github"></i>
+      </a>
+      <a class="contact-link clr-linkedin" href="#">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a class="contact-link clr-facebook" href="/">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a class="contact-link clr-whatsapp" href="/">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </nav>
+
+  <section class='hero sec' id="home">
+    <p class="show-when-entered badge">My Portfolio</p>
+
+    <div class='social show-when-entered'>
+      <a href="/" class='social_icon scale-up'>
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="/" class='social_icon scale-up'>
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="/" class='social_icon scale-up'>
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+
+    <div class='hero_content show-when-entered'>
+      <h1 class='hero_title'>
+        <span class="slide-to-down">Hi,</span>
+        <span class="slide-to-up">i'm Roni</span>
+      </h1>
+      <hr class="line stretch-to-right">
+      <p class='hero_para slide-to-down'>developer &amp; designer</p>
+      <a href="#about" class="btn-transparent btn-down scale-down">
+        <i class="fas fa-chevron-down"></i>
+      </a>
+    </div>
+  </section>
+
+  <section class='about sec' id="about">
+    <p class='show-when-entered badge'>About me</p>
+    <div class='container'>
+      <div class='about_content'>
+        <div class='about_img show-on-enter slide-to-right'>
+          <img class="testing" src="./images/about-img.jpg" alt='a man' />
+        </div>
+        <div class='about_text'>
+          <h2 class='sec-title show-when-entered slide-to-left'>About me</h2>
+          <hr class="line stretch-to-right show-when-entered">
+          <p class="slide-to-down show-when-entered">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptates modi, incidunt id quae delectus praesentium tempora
+            autem repudiandae
+          </p>
+          <button class='btn-transparent about-btn slide-to-down show-when-entered'><span>Read more</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class='my-projects sec' id="work">
+    <p class='show-when-entered badge'>My Projects</p>
+    <div class='container'>
+      <h2 class='sec-title slide-down show-when-entered'>My Projects</h2>
+      <div class='projects-wrapper show-on-enter'>
+        <!-- Project Box 1 -->
+        <div class='project-box show-when-entered'>
+          <a href="/">
+            <img class="project-box_img scale-up"
+              src='https://cdn.pixabay.com/photo/2016/10/15/20/35/hexagon-1743514_960_720.png' alt='' />
+          </a>
+          <h6 class='project_name scale-up'>Color picker</h6>
+          <p class="scale-up">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+
+        <!-- Project Box 2 -->
+        <div class='project-box show-when-entered align-right'>
+          <a href="/">
+            <img class="project-box_img  scale-up"
+              src='https://cdn.pixabay.com/photo/2016/12/04/18/57/share-1882323_960_720.png' alt='' />
+          </a>
+          <h6 class='project_name  scale-up'>Random Message</h6>
+          <p class=" scale-up">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+
+        <!-- Project Box 3 -->
+        <div class='project-box show-when-entered'>
+          <a href="/">
+            <img class="project-box_img  scale-up"
+              src='https://cdn.pixabay.com/photo/2016/10/15/20/35/hexagon-1743514_960_720.png' alt='' />
+          </a>
+          <h6 class='project_name  scale-up'>Color picker</h6>
+          <p class=" scale-up">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+
+        <!-- Project Box 4 -->
+        <div class='project-box show-when-entered align-right'>
+          <a href="/">
+            <img class="project-box_img  scale-up"
+              src='https://cdn.pixabay.com/photo/2016/12/04/18/57/share-1882323_960_720.png' alt='' />
+          </a>
+          <h6 class='project_name  scale-up'>Random Message</h6>
+          <p class=" scale-up">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="skill sec" id="skill">
+    <p class='show-when-entered badge'>My Skills</p>
+    <div class="container">
+      <h2 class="sec-title">My Skills</h2>
+
+      <div class="skills_content">
+        <div class="my-skill show-when-entered">
+          <div class="my-skill_img increasing-waves">
+            <img src="./images/html.svg" alt="HTML icon">
+          </div>
+          <div class="my-skill_stats">
+            <div class="text">
+              <p class="my-skill_name">HTML5</p>
+              <p>95%</p>
+            </div>
+            <div class="progress progress-html"></div>
+          </div>
+        </div>
+        <div class="my-skill show-when-entered">
+          <div class="my-skill_img increasing-waves">
+            <img src="./images/css.svg" alt="CSS icon">
+          </div>
+          <div class="my-skill_stats">
+            <div class="text">
+              <p class="my-skill_name">CSS3</p>
+              <p>90%</p>
+            </div>
+            <div class="progress progress-css"></div>
+          </div>
+        </div>
+        <div class="my-skill show-when-entered">
+          <div class="my-skill_img increasing-waves">
+            <img src="./images/bootstrap.svg" alt="bootstrap icon">
+          </div>
+          <div class="my-skill_stats">
+            <div class="text">
+              <p class="my-skill_name">Bootstrap</p>
+              <p>85%</p>
+            </div>
+            <div class="progress progress-b"></div>
+          </div>
+        </div>
+        <div class="my-skill show-when-entered">
+          <div class="my-skill_img increasing-waves">
+            <img src="./images/sass.svg" alt="sass icon">
+          </div>
+          <div class="my-skill_stats">
+            <div class="text">
+              <p class="my-skill_name">Sass</p>
+              <p>90%</p>
+            </div>
+            <div class="progress progress-sass"></div>
+          </div>
+        </div>
+        <div class="my-skill show-when-entered">
+          <div class="my-skill_img increasing-waves">
+            <img src="./images/js.svg" alt="javascript icon">
+          </div>
+          <div class="my-skill_stats">
+            <div class="text">
+              <p class="my-skill_name">JavaScript</p>
+              <p>95%</p>
+            </div>
+            <div class="progress progress-js"></div>
+          </div>
+        </div>
+        <div class="my-skill show-when-entered">
+          <div class="my-skill_img increasing-waves">
+            <img src="./images/react.svg" alt="react icon">
+          </div>
+          <div class="my-skill_stats">
+            <div class="text">
+              <p class="my-skill_name">React JS</p>
+              <p>85%</p>
+            </div>
+            <div class="progress progress-react"></div>
+          </div>
+        </div>
+        <div class="my-skill show-when-entered">
+          <div class="my-skill_img increasing-waves">
+            <img src="./images/node.svg" alt="node icon">
+          </div>
+          <div class="my-skill_stats">
+            <div class="text">
+              <p class="my-skill_name">Node JS</p>
+              <p>75%</p>
+            </div>
+            <div class="progress progress-html"></div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+  <footer class="footer sec" id="contact">
+    <div class="container">
+      <div class="contacts">
+        <div class="contact-group show-when-entered scale-up">
+          <span class="contact-group_icon"><i class="fas fa-envelope"></i></span>
+          <p class="contact_text">example@gmail.com</p>
+        </div>
+        <div class="contact-group show-when-entered scale-up">
+          <span class="contact-group_icon"><i class="fas fa-phone-alt"></i></span>
+          <p class="contact_text">+91 1234 12 00</p>
+        </div>
+        <div class="contact-group show-when-entered scale-up">
+          <span class="contact-group_icon"><i class="fab fa-linkedin-in"></i></span>
+          <p class="contact_text">linkedin.com/someID</p>
+        </div>
+        <div class="contact-group show-when-entered scale-up">
+          <span class="contact-group_icon"><i class="fab fa-github"></i></span>
+          <p class="contact_text">https://github.com/Ronidey</p>
+        </div>
+      </div>
+
+      <div class="footer_bottom">
+        <p class="show-on-enter slide-to-up copyright">@2020 Roni Dey. All rights are reserved</p>
+
+        <a href="#home" class="btn-go-up show-on-enter scale-up">
+          <i class="fas fa-chevron-up"></i>
+        </a>
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="./bundle.js"></script>
+</body>
+
+</html>

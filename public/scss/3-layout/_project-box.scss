@@ -1,0 +1,101 @@
+.project-box {
+  margin-bottom: 5rem;
+  max-width: 300px;
+
+  &.is-visible {
+    .scale-up {
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none;
+      opacity: 1;
+      -webkit-transition-delay: 0.5s;
+      -o-transition-delay: 0.5s;
+      transition-delay: 0.5s;
+    }
+  }
+
+  &_img {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    margin-bottom: 0.45rem;
+  }
+
+  &_name {
+    font-size: 1rem;
+    position: relative;
+    padding-bottom: 0.4em;
+    margin-bottom: 0.45em;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 50%;
+      height: 1px;
+      background: #fff;
+    }
+  }
+
+  p {
+    font-size: 0.85rem;
+    width: 85%;
+  }
+}
+
+.project-box.align-right {
+  margin-left: auto;
+  text-align: right;
+
+  .project_name::before {
+    right: 0;
+  }
+
+  p {
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 615px) {
+  .project-box {
+    max-width: 50%;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 35%;
+      left: 175px;
+      right: 0;
+      height: 1px;
+      -webkit-transform: scale(0, 1);
+      -ms-transform: scale(0, 1);
+      transform: scale(0, 1);
+      background: rgba(255, 255, 255, 0.75);
+      -webkit-transition: -webkit-transform 1s $cubic-bezier;
+      transition: -webkit-transform 1s $cubic-bezier;
+      -o-transition: transform 1s $cubic-bezier;
+      transition: transform 1s $cubic-bezier;
+      transition: transform 1s $cubic-bezier, -webkit-transform 1s $cubic-bezier;
+      -webkit-transform-origin: right;
+      -ms-transform-origin: right;
+      transform-origin: right;
+    }
+  }
+
+  .project-box.align-right::before {
+    left: 0;
+    right: 175px;
+    -webkit-transform-origin: left;
+    -ms-transform-origin: left;
+    transform-origin: left;
+  }
+
+  .project-box.is-visible::before {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}

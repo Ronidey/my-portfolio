@@ -1,0 +1,25 @@
+// Common in section
+.sec {
+  padding: 6rem 0;
+  position: relative;
+  z-index: 1;
+
+  &:nth-child(even) {
+    background: $gradient1;
+  }
+
+  &:nth-child(odd) {
+    background: $gradient2;
+  }
+}
+
+.sec-title {
+  text-transform: uppercase;
+  font-size: 1.75rem;
+}
+
+.container {
+  padding: 0 1.5rem;
+  max-width: 750px;
+  margin: 0 auto;
+}

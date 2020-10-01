@@ -1,0 +1,17 @@
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xlg: 1140px;
+
+$gradient1: linear-gradient(180deg, #73a7fd 7.64%, #8f7dfe 100%);
+$gradient2: linear-gradient(0deg, #73a7fd 0%, #8f7dfe 94.58%);
+$cubic-bezier: cubic-bezier(0.63, 0.04, 0.04, 0.92);
+
+$headings: (
+  h1: 2.5rem,
+  h2: 2rem,
+  h3: 1.75rem,
+  h4: 1.5rem,
+  h5: 1.25rem,
+  h6: 1rem
+);

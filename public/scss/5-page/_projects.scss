@@ -1,0 +1,54 @@
+// Project
+.my-projects {
+  padding: 4rem 0;
+  background: $gradient1;
+}
+
+.my-projects .sec-title {
+  text-align: center;
+  margin-bottom: 6rem;
+
+  &.is-visible.animate {
+    -webkit-animation-play-state: initial;
+    animation-play-state: initial;
+  }
+}
+
+.my-projects .badge {
+  margin-left: -4.5rem;
+}
+
+.projects-wrapper {
+  max-width: 750px;
+  margin: auto;
+  position: relative;
+}
+
+@media (min-width: 615px) {
+  .projects-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -5rem;
+    left: calc(50% - 2px);
+    bottom: -5rem;
+    width: 2px;
+    background: #fff;
+    -webkit-transform: scale(1, 0);
+    -ms-transform: scale(1, 0);
+    transform: scale(1, 0);
+    -webkit-transition: -webkit-transform 2s $cubic-bezier;
+    transition: -webkit-transform 2s $cubic-bezier;
+    -o-transition: transform 2s $cubic-bezier;
+    transition: transform 2s $cubic-bezier;
+    transition: transform 2s $cubic-bezier, -webkit-transform 2s $cubic-bezier;
+    -webkit-transform-origin: top;
+    -ms-transform-origin: top;
+    transform-origin: top;
+  }
+
+  .projects-wrapper.is-visible::before {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}

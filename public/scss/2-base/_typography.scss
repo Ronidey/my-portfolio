@@ -1,0 +1,27 @@
+// ---- Roboto ----
+@font-face {
+  font-family: 'Asap';
+  src: url('/fonts/Asap-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Asap';
+  src: url('/fonts/Asap-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Asap';
+  src: url('/fonts/Asap-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@each $prop, $val in $headings {
+  #{$prop} {
+    font-size: $val;
+    font-weight: 600;
+  }
+}
+
+p {
+  font-size: 0.9rem;
+}

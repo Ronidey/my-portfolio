@@ -1,0 +1,91 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: $gradient1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  &_content {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    max-width: 300px;
+
+    .line {
+      -webkit-transition-delay: 0.5s;
+      -o-transition-delay: 0.5s;
+      transition-delay: 0.5s;
+    }
+
+    .hero_title span:nth-child(2),
+    .hero_para {
+      -webkit-transition-delay: 1s;
+      -o-transition-delay: 1s;
+      transition-delay: 1s;
+    }
+
+    .btn-down {
+      -webkit-transition: background 250ms 0s ease,
+        opacity 1.5s 1.75s $cubic-bezier,
+        -webkit-transform 1.5s 1.75s $cubic-bezier;
+      transition: background 250ms 0s ease, opacity 1.5s 1.75s $cubic-bezier,
+        -webkit-transform 1.5s 1.75s $cubic-bezier;
+      -o-transition: background 250ms 0s ease,
+        transform 1.5s 1.75s $cubic-bezier, opacity 1.5s 1.75s $cubic-bezier;
+      transition: background 250ms 0s ease, transform 1.5s 1.75s $cubic-bezier,
+        opacity 1.5s 1.75s $cubic-bezier;
+      transition: background 250ms 0s ease, transform 1.5s 1.75s $cubic-bezier,
+        opacity 1.5s 1.75s $cubic-bezier,
+        -webkit-transform 1.5s 1.75s $cubic-bezier;
+    }
+  }
+
+  &_content.is-visible {
+    .slide-to-down,
+    .slide-to-up,
+    .stretch-to-right,
+    .scale-down {
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none;
+      opacity: 1;
+    }
+  }
+
+  &_content {
+    padding: 0 1rem;
+  }
+
+  &_title {
+    font-size: 1.5rem;
+    line-height: 1.1;
+
+    span {
+      display: inline-block;
+    }
+
+    span:first-child {
+      font-size: 6rem;
+      margin-right: 0.1em;
+    }
+  }
+
+  &_para {
+    text-align: right;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    position: relative;
+    padding: 0.4rem 0;
+  }
+
+  .badge {
+    margin-left: -5rem;
+  }
+}

@@ -1,0 +1,203 @@
+// Navigation
+.nav {
+  visibility: hidden;
+  margin-left: auto;
+  position: absolute;
+  right: 100%;
+
+  @include m-query($md) {
+    visibility: visible;
+    position: static;
+  }
+
+  &_menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    align-items: center;
+  }
+
+  li {
+    &:nth-child(1) {
+      -webkit-transition-delay: 2.5s;
+      -o-transition-delay: 2.5s;
+      transition-delay: 2.5s;
+    }
+    &:nth-child(2) {
+      -webkit-transition-delay: 2.7s;
+      -o-transition-delay: 2.7s;
+      transition-delay: 2.7s;
+    }
+    &:nth-child(3) {
+      -webkit-transition-delay: 2.9s;
+      -o-transition-delay: 2.9s;
+      transition-delay: 2.9s;
+    }
+    &:nth-child(4) {
+      -webkit-transition-delay: 3.1s;
+      -o-transition-delay: 3.1s;
+      transition-delay: 3.1s;
+    }
+    &:nth-child(5) {
+      -webkit-transition-delay: 3.3s;
+      -o-transition-delay: 3.3s;
+      transition-delay: 3.3s;
+    }
+  }
+
+  &.is-visible .scale-down {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+
+  &_menu > li + li {
+    margin-left: 1.5rem;
+  }
+
+  &_link {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.3rem 0.1rem;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #fff;
+      -webkit-transform: scale(0, 1);
+      -ms-transform: scale(0, 1);
+      transform: scale(0, 1);
+      -webkit-transition: -webkit-transform 250ms ease;
+      transition: -webkit-transform 250ms ease;
+      -o-transition: transform 250ms ease;
+      transition: transform 250ms ease;
+      transition: transform 250ms ease, -webkit-transform 250ms ease;
+    }
+
+    &.is-active::before,
+    &:hover::before,
+    &:focus::before {
+      -webkit-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+      transform: scale(1, 1);
+    }
+  }
+}
+
+// ============= SideNav ===============
+.side-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  background: #fff;
+  color: #333;
+  z-index: 99;
+  -webkit-transform: translateX(-105%);
+  -ms-transform: translateX(-105%);
+  transform: translateX(-105%);
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  -o-transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+
+  @include m-query($md) {
+    -webkit-transform: translateX(-105%) !important;
+    -ms-transform: translateX(-105%) !important;
+    transform: translateX(-105%) !important;
+  }
+
+  &_top {
+    height: 15%;
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(7.64%, #3f79d9),
+      to(#5e48de)
+    );
+    background: -o-linear-gradient(top, #3f79d9 7.64%, #5e48de 100%);
+    background: linear-gradient(180deg, #3f79d9 7.64%, #5e48de 100%);
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+  }
+
+  &_body {
+    padding: 1.5rem 1rem;
+  }
+
+  &_link {
+    display: block;
+    padding: 0.35rem;
+    text-transform: uppercase;
+
+    & + a {
+      margin-top: 0.5rem;
+    }
+
+    &.is-active {
+      background: #352ec7;
+      color: #fff;
+    }
+
+    &:hover:not(.is-active),
+    &:focus:not(.is-active) {
+      background: #f2f2f2;
+      outline: 0;
+    }
+  }
+
+  hr {
+    margin: 1.5rem 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 0.5em;
+  }
+
+  .contact-link {
+    display: inline-block;
+    font-size: 1.25rem;
+    padding: 0.15rem;
+    -webkit-transition: -webkit-transform 250ms ease;
+    transition: -webkit-transform 250ms ease;
+    -o-transition: transform 250ms ease;
+    transition: transform 250ms ease;
+    transition: transform 250ms ease, -webkit-transform 250ms ease;
+
+    &:hover,
+    &:focus {
+      -webkit-transform: scale(1.25);
+      -ms-transform: scale(1.25);
+      transform: scale(1.25);
+      outline: 0;
+    }
+
+    & + a {
+      margin-left: 0.15rem;
+    }
+  }
+}
+
+.nav-is-open {
+  .side-nav {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
